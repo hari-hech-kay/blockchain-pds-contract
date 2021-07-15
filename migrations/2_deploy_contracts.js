@@ -1,0 +1,8 @@
+const PDS = artifacts.require("PDS");
+const StringUtils = artifacts.require("StringUtils");
+
+module.exports = function (deployer) {
+	deployer.deploy(StringUtils);
+	deployer.link(StringUtils, PDS);
+	deployer.deploy(PDS, ["0x44DaD7C4227D295141afa4fd3B74f20B5091CA13", "0x8530CF741C732DfBb44117932aDDcE25634671dC", "0x7c15bCB07E6e4195Ba594D9cBAbC15f8FE1C5d74", "0x4B9E669ee59689fc037365B41188164f89F8E5AB", "0x3079F09A0301067B83130704688914198792FaE8", "0xBf89d49e6d38D9a6D5aD9ED4f7f14Bf889Cb2f2b", "0x35145299b9E89E900dF66A37fE61699d56270e2D", "0x0476989A332Ac0C3AAB316D144E7C89C6C41C507"]);
+};
